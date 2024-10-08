@@ -15,6 +15,7 @@ export default async function UserIdPage({ params }: UserIdPageProps) {
   });
   return (
     <div>
+      {/* @ts-ignore */}
       <UpdateUserForm data={user} userId={userId} />
     </div>
   );

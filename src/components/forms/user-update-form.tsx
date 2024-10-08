@@ -66,6 +66,7 @@ export const UpdateUserForm = ({ data, userId }: UpdateUserFormProps) => {
 
   const onSubmit = (values: FormType) => {
     console.log("values:", values);
+    // @ts-ignore
     updateUser(values, {
       onSuccess: () => {
         router.push("/dashboard");

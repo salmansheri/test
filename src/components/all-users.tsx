@@ -1,11 +1,11 @@
 "use client";
 import { DataTable } from "@/app/dashboard/data-table";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { columns, UsersType } from "@/app/dashboard/columns";
 import { useGetUsers } from "@/hooks/api/use-get-users";
 import { Loader2, PlusIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { columns } from "@/app/dashboard/columns";
 
 export const AllUsers = () => {
   const { data: users, isLoading: isUsersLoading } = useGetUsers();

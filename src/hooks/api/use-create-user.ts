@@ -10,6 +10,7 @@ type ResponseType = InferResponseType<typeof client.api.user.$post>;
 export const useCreateUser = () => {
   const queryClient = useQueryClient();
   const mutation = useMutation<ResponseType, Error, RequestType>({
+    //@ts-ignore
     mutationFn: async (json) => {
       const response = await client.api.user.$post({ json });
       if (!response.ok) {

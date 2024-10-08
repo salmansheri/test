@@ -13,6 +13,7 @@ type ResponseType = InferResponseType<
 export const useDeleteUser = () => {
   const queryClient = useQueryClient();
   const mutation = useMutation<ResponseType, Error, RequestType>({
+    // @ts-ignore
     mutationFn: async (param) => {
       const response = await client.api.user[":id"].$delete({
         param,

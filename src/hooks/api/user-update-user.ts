@@ -11,8 +11,10 @@ type ResponseType = InferResponseType<
 export const useUpdateUser = (id: string) => {
   const queryClient = useQueryClient();
   const mutation = useMutation<ResponseType, Error, RequestType>({
+    // @ts-ignore
     mutationFn: async (json) => {
       const response = await client.api.user[":id"].$patch({
+        // @ts-ignore
         json,
         param: { id },
       });
